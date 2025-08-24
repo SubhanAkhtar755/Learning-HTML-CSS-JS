@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Cheat Sheet</title>
+    <link rel="stylesheet" href="css/htmlcheat.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>HTML Cheat Sheet</h1>
+        <input type="text" class="search-box" placeholder="Search CSS properties...">
+        <div class="category">
+            <h2 id="Basic">Basic Tags</h2>
+            <div class="code-block">
+                <pre>
+                    <p> <span>&lt;html&gt;&lt;/html&gt;</span>: Creates an HTML document</p>
+                    <p><span>&lt;head&gt;&lt;/head&gt;</span>: Sets off the title and other info that isn,t displayed</p>
+                    <p><span>&lt;title&gt;&lt;/title&gt;</span>: Puts name of the document in the title bar</p>
+                    <p><span>&lt;body&gt;&lt;/body&gt;</span>: Sets off the visible option of a document</p>
+    </pre>
+            </div>
+        </div>
+        <div class="category">
+            <h2 id="Text">Text Tags</h2>
+            <div class="code-block">
+                <pre>
+                    <p><span>&lt;pre&gt;&lt;/pre&gt;</span>: Creates performatted text<p>
+                        <p><span>&lt;h1&gt;&lt;/h1&gt;-->&lt;h6&gt; &lt;/h6&gt;</span>: Creates headlines -- H1=Largest,H6=Smallest<p>
+                        <p><span>&lt;b&gt;&lt;/b&gt;</span>: Creates bold text (should use &lt;strong&gt; instead)<p>
+                            <p><span>&lt;i&gt;&lt;/i&gt;</span>: Creates italicized text (should use &lt;em&gt; instead)<p>
+                        <p><span>&lt;tt&gt;&lt;/tt&gt;</span>: Creates typewriter-style text<p>
+                        <p><span>&lt;code&gt;&lt;/code&gt;</span>: Use to define source code , usally monospace<p>
+                        <p><span>&lt;cite&gt;&lt;/cite&gt;</span>: Creates a citation , usually processsd in italics<p>
+                        <p><span>&lt;address&gt;&lt;/address&gt;</span>: Creates address section , usually processsd in italics<p>
+                        <p><span>&lt;em&gt;&lt;/em&gt;</span>: Emphasizes a word (usually processsd in italics) <p>
+                        <p><span>&lt;strong&gt;&lt;/strong&gt;</span>: Emphasizes a word (usually processsd in bold)<p>
+                        <p><span>&lt;font&gt;&lt;/font&gt;</span>: Sets size of font-1 to 7 (should use CSS instead)</p>
+                     </pre>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 id="links">Links</h2>
+            <div class="code-block">
+                <pre>
+
+    <p> <span>&lt;a href="URL"&gt;&lt;/a&gt;</span>: Creates a hyperlink to a Uniform Resource Locator</p>
+    <p><span>&lt;a href="mailto:EMAIL_ADDRESS"&gt;&lt;/a&gt;</span>: Creates a hyperlink to an email address</p>
+    <p><span>&lt;a name="Name"&gt;&lt;/a&gt;</span>: Creates a target location within a document</p>
+    <p><span>&lt;a href="#Name"&gt;&lt;/a&gt;</span>: Creates a link to that target location</p>
+
+  
+</pre>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 id="Formatting">Formatting</h2>
+            <div class="code-block">
+                <pre>
+                    <p> <span>&lt;p&gt;&lt;/p&gt;</span>: Creates a new paragraph</p>
+                    <p><span>&lt;br&gt;&lt;/br&gt;</span>: Alnserts a line break (carriage return)</p>
+                    <p><span>&lt;blockquote&gt;&lt;/blockquote&gt;</span>: Puts content in a quote-indents text from both sides</p>
+                    <p><span>&lt;div&gt;&lt;/div&gt;</span>: Used to format block content with CSS</p>
+                    <p><span>&lt;span&gt;&lt;/span&gt;</span>: Used to format inline content with CSS</p>
+    
+                 </pre>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 id="Form">Forms</h2>
+            <div class="code-block">
+                <pre>
+                    <p> <span>&lt;form&gt;&lt;/form&gt;</span>: Defines a form</p>
+                    <p><span>&lt;select multiple name="?" size="?"&gt;&lt;/select&gt;</span>: Creates a scrolling menu.Size sets the number of menu items visible before user needs to scroll.</p>
+                    <p><span>&lt;select  name="?"&gt;&lt;/select&gt;</span>: Creates a pulldown menu sides</p>
+                    <p><span>&lt;option&gt;&lt;/option&gt;</span>: Sets of each menu item</p>
+                    <p><span>&lt;textarea name="?" cols="?" rows="?"&gt;&lt;/textarea&gt;</span>: Creates a textbox area.Columns set the width ; rows set the height </p>
+                    <p><span>&lt;input type="checkbox" name="?" value="?"&gt;</span>:Creates a checkbox</p>
+                    <p><span>&lt;input type="checkbox" name="?" value="? checked"&gt;</span>:Creates a checkbox which is pre-checked </p>
+                    <p><span>&lt;input type="radio" name="?" value="?"&gt;</span>:Creates a radio button</p>
+                    <p><span>&lt;input type="radio" name="?" value="?" checked&gt;</span>:Creates a radio button which is pre-checked</p>
+                    <p><span>&lt;input type="text" name="?" size="?"&gt;</span>:Creates a one line text area .Size sets length,in characters</p>
+                    <p><span>&lt;input type="submit" value="?"&gt;</span>:Creates a submit button.Value sets the text in the submit button</p>
+                    <p><span>&lt;input type="image" name="?" src="?" border="?" alt="?"&gt;</span>:Creates a submit button using an image</p>
+                    <p><span>&lt;input type="reset"&gt;</span>:Creates a reset button</p>
+    
+                  </pre>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 id="List">Lists</h2>
+            <div class="code-block">
+                <pre>
+                    <p> <span>&lt;ul&gt;&lt;/ul&gt;</span>: Creates an unordered list</p>
+                    <p><span>&lt;ol start="?"&gt;&lt;/ol&gt;</span>: Creates an ordered list (start=xx,where xx is a counting number)</p>
+                    <p><span>&lt;li&gt;&lt;/li&gt;</span>: Puts content in a quote-indents text from both sides</p>
+                    <p><span>&lt;dl&gt;&lt;/dl&gt;</span>: Encompasses each list item </p>
+                    <p><span>&lt;dt&gt;&lt;/dt&gt;</span>: Creates a definition list</p>
+                    <p><span>&lt;dd&gt;&lt;/dd&gt;</span>: Precedes each definition term</p>
+                    <h2>Tables(use only for data layout)</h2>
+                    <p><span>&lt;table&gt;&lt;/table&gt;</span>: Creates a table </p>
+                    <p><span>&lt;tr&gt;&lt;/tr&gt;</span>: Sets of each row in a table</p>
+                    <p><span>&lt;td&gt;&lt;/td&gt;</span>: Sets of each cell in a row</p>
+                    <p><span>&lt;th&gt;&lt;/th&gt;</span>: Sets of the table header (a normal cell with bold , centerd text)</p>
+    
+                  </pre>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 id="Input">Input</h2>
+            <div class="code-block">
+                <pre>
+                    <p><span>&lt;input type="email" name="?"&gt;</span>: Sets a single-line textbox for email addresses</p>
+                    <p><span>&lt;input type="url" name="?"&gt;</span>: Sets a single-line textbox for URLs</p>
+                    <p><span>&lt;input type="number" name="?"&gt;</span>: Sets a single-line textbox for a number</p>
+                    <p><span>&lt;input type="range" name="?"&gt;</span>: Sets a single-line textbox for a range of numbers</p>
+                    <p><span>&lt;input type="date/month/week/time" name="?"&gt;</span>: Sets a single-line textbox with a calender showing the date/month/week/time</p>
+                    <p><span>&lt;input type="search" name="?"&gt;</span>: Sets a single-line textbox for searching</p>
+                    <p><span>&lt;input type="color" name="?"&gt;</span>: Sets a single-line textbox for picking a color</p>
+    
+        </pre>
+            </div>
+        </div>
+    </div>
+    <script src="js/htmlcheat.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1268 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: Poppins, sans-serif;
+    background-color: #fff !important;
+  
+  }
+  
+  a {
+    text-decoration: none; /* Remove the underline */
+    color: inherit; /* Inherit the color from the parent element (e.g., the section background or title color) */
+    font-weight: normal; /* Reset any bolding */
+    cursor: pointer; /* Ensure it's still clickable */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Remove the underline */
+    color: inherit; /* Inherit the color from the parent element (e.g., the section background or title color) */
+    font-weight: bold; /* Reset any bolding */
+    cursor: pointer; /* Ensure it's still clickable */
+  }
+  
+  .zero {
+    text-decoration: line-through; /* Adds a line through the zero */
+    font-size: 13px; /* Adjust the size as needed */
+    font-weight: normal; /* Optional: Make it bold for emphasis */
+  }
+  
+  /* Ensure parent menu items don't become bold when hovered */
+  .nav ul li a:hover {
+    font-weight: normal; /* Parent items won't become bold */
+    color: #f5f8fc; /* You can customize the color for parent hover */
+    font-weight: bold; /* Reset any bolding */
+  }
+  
+  /* Optional: Ensure sub-menu container (ul) is hidden until hovered */
+  .nav ul li ul {
+    display: none; /* Hide sub-menus by default */
+  }
+  
+  .nav ul li:hover > ul {
+    display: block; /* Show the sub-menu when parent is hovered */
+    color: #f5f8fc;
+  }
+  
+  /* Main Flex Container */
+  .flex-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Left Flex Box */
+  .left-flex {
+    width: 2%;
+    background-color: #FFFFFF;
+    /*border: 1px solid black;*/
+  }
+  
+  /* Middle Flex Box */
+  .middle-flex {
+    display: flex;
+    flex-direction: column;
+    width: 22%;
+    background-color: #266CA9; /*#5B6D92;*/ 
+    /*border: 1px solid black;*/
+  }
+  
+  /* Top Section of Middle Flex Box */
+  .top-middle {
+    height: 26%;
+    /*border: 1px solid black;*/
+  }
+  
+  /* Main Section of Middle Flex Box */
+  .main-middle {
+    height: 70%;
+    /*border: 1px solid black;*/
+  }
+  
+  /* Bottom Section of Middle Flex Box */
+  .bottom-middle {
+    font-weight: normal;
+    font-family: Trebuchet MS;
+    font-size: 13px;
+    height: 4%;
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Ensures text is aligned in the center */
+    color: #f5f8fc; /* Sets the text color (you can change this to any color) */
+    /*border: 1px solid black;*/
+  }
+  
+  /* Right Flex Box */
+  .right-flex {
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+    background-color: #FFFFFF /*#EFEFE9;*/
+    /*border: 1px solid black;*/
+  }
+  
+  /* Top Section of Right Flex Box (Menu) */
+  .top-right {
+    height: 10%;
+    /*border: 1px solid black;*/
+    display: flex;
+    justify-content: flex-end; /* Align menu to the right */
+    align-items: center; /* Vertically center the menu */
+  }
+  
+  .top-right ul {
+    list-style: none;
+    display: flex;
+    gap: 1%; /* Space of 1% between menu items */
+  }
+  
+  .top-right li {
+    cursor: pointer;
+    color: #266CA9;
+    padding: 5px 15px; /* Add more padding for breathing space */
+    white-space: nowrap; /* Prevent text from wrapping */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    min-width: 80px; /* Ensure there's enough width for the text */
+    position: relative; /* For positioning pseudo-element */
+  
+    /* Flexbox to center text horizontally and vertically */
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    text-align: center; /* Ensure text is centered */
+  }
+  
+  .top-right a {
+    text-decoration: none; /* Remove the underline */
+    color: inherit; /* Inherit the color from the parent element (e.g., the section background or title color) */
+    font-weight: normal; /* Reset any bolding */
+    cursor: pointer; /* Ensure it's still clickable */
+  }
+  
+  .top-right li:hover {
+    color: #266CA9;
+    font-weight: bold; /* Bold on hover */
+    text-decoration: none; /* Remove the default underline */
+  }
+  
+  /* Add the underline using the ::after pseudo-element */
+  .top-right li::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Space between text and underline */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: #266CA9; /* Color of the underline */
+    transform: scaleX(0); /* Initially hide the underline */
+    transition: transform 0.3s ease; /* Smooth transition for the underline */
+  }
+  
+  .top-right li:hover::after {
+    transform: scaleX(1); /* Show the underline when hovering */
+  }
+  
+  /* Parent menu with sub-menu */
+  .parent-menu {
+    position: relative; /* Positioning for sub-menu */
+  }
+  
+  /* Initially hidden sub-menu */
+  .sub-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%; /* Position below the parent item */
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for card effect */
+    min-width: 150px; /* Minimum width for sub-menu */
+    display: none; /* Hidden by default */
+    margin-top: 10px; /* Add space between parent and sub-menu */
+    z-index: 10; /* Make sure it appears above other content */
+  }
+  
+  /* Sub-menu item styling */
+  .sub-menu li {
+    color: #266CA9;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative; /* For positioning pseudo-element */
+    font-weight: normal; /* Sub-menu items should not be bold by default */
+  
+    /* Flexbox to keep text left-aligned */
+    display: flex;
+    justify-content: flex-start; /* Align text to the left */
+    align-items: center; /* Vertically center the content */
+    text-align: left; /* Ensure text is aligned left */
+  }
+  
+  .sub-menu li:hover {
+    color: #f5f8fc;
+    background-color: #266CA9; /*#f5f8fc; /* Light hover effect for sub-menu items */
+    font-weight: bold; /* Bold on hover */
+    text-decoration: none; /* Remove the default underline */
+  }
+  
+  /* Add the underline using the ::after pseudo-element for sub-menu items */
+  .sub-menu li::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Space between text and underline */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: #266CA9; /* Color of the underline */
+    transform: scaleX(0); /* Initially hide the underline */
+    transition: transform 0.3s ease; /* Smooth transition for the underline */
+  }
+  
+  .sub-menu li:hover::after {
+    transform: scaleX(1); /* Show the underline when hovering */
+  }
+  
+  /* Add some padding to the right of the last menu item to leave space */
+  .top-right ul li:last-child {
+    /*padding-right: 50px; /* Add extra space to the right of the last menu item */
+  }
+  
+  .empty-div {
+    padding-right: 50px; /* Add extra space to the right of the last menu item */
+  }
+  
+  /* Bottom Section of Right Flex Box */
+  .bottom-right {
+    height: 90%; /* Keeps the existing height */
+    display: flex;
+    justify-content: center; /* Center the inner flex horizontally */
+    align-items: center; /* Center the inner flex vertically */
+    position: relative;
+    /*padding: 10px;*/
+  }
+  
+  /* Center-aligned square image with rounded edges and light border */
+  .image-container {
+    display: flex; /* Enable flexbox to center the image */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    padding-top: 35%; /* Add 10% gap from the top */
+    height: 40%; /* Ensure the container takes the full available height */
+    margin-top: 20px;
+  }
+  
+  .image-container img {
+    width: 50%; /* Set the image width to 80% of the container's width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 50%; /* Ensure the image doesn't stretch beyond container width */
+    aspect-ratio: 1 / 1; /* Force the image to be square */
+    border-radius: 10px; /* Rounded edges */
+    border: 1px solid #f5f8fc; /* Light border color (you can adjust the color) */
+    object-fit: cover; /* Make sure the image covers the area inside the square */
+  }
+  
+  .section {
+    display: flex; /* Enable flexbox to center the image */
+    flex-direction: column; /* Ensure section pairs stack vertically */
+    padding-top: 3%; /* Add 10% gap from the top */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+  }
+  
+  /* Each pair contains a title and detail section */
+  .section-pair {
+    display: flex;
+    flex-direction: column; /* Stack title and detail vertically */
+    padding: 15px 15px 10px 0px; /*15px;*/
+    width: 72%; /* Set the image width to 80% of the container's width */
+    border-radius: 5px;
+    margin-bottom: 8px; /* Added top margin for space above each section pair */
+  }
+  
+  /* Title styling */
+  .title {
+    font-weight: bold;
+    font-family: Trebuchet MS;
+    font-size: 17px;
+    letter-spacing: 1px;
+    /*font-family: sans-serif;
+    text-transform: uppercase;*/
+    font-variant: small-caps;
+    color: rgba(245, 248, 252, 1); /* Title color */
+    position: relative; /* To position the underline relative to the title */
+    margin-bottom: 10px; /* Space after the title and the section's content */
+    padding-bottom: 5px; /* Adds space between the title and the underline */
+    padding-top: 5px; /* Adds space between the title and the underline */
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Centers content vertically */
+    padding-left: 10px; /* Adjusts padding for the title */
+  }
+  
+  /* Underline styling */
+  .title::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute;
+    left: 10px; /* Offset from the left of the title */
+    bottom: 0; /* Position the underline at the bottom */
+    width: 100%; /* Make the underline extend across the full width */
+    height: 1px; /* Thickness of the underline */
+    background-color: rgba(245, 248, 252, 1); /* Color of the underline */
+  }
+  
+  
+  /* Detail styling */
+  .detail {
+    color: #f5f8fc;
+    font-weight: normal;
+    font-family: Trebuchet MS;
+    font-size: 13px;
+  }
+  
+  /* Style for the unordered list */
+  ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 10px; /* Remove default padding */
+  }
+  
+  /* Universal styles for all list item icons */
+  li::before {
+    font-family: "Bootstrap Icons"; /* Ensure it uses Bootstrap Icons */
+    font-weight: normal; /* Bootstrap Icons are by default normal weight */
+    margin-right: 10px; /* Space between icon and text */
+    padding-bottom: 5px; /* Remove default padding */
+    font-size: 15px; /* Optional: size of the icon */
+    color: #f5f8fc;
+  }
+  
+  /* Individual icons with specific colors */
+  
+  /* For bi-seedling (Plant a tree) */
+  .bi-seedling::before {
+    content: "\f4d8"; /* Unicode for bi-seedling */
+  }
+  
+  /* For bi-cpu (Upgrade the hardware) */
+  .bi-cpu::before {
+    content: "\f108"; /* Unicode for bi-cpu */
+  }
+  
+  /* For bi-geo-alt (Find my location) */
+  .bi-geo-alt::before {
+    content: "\f3c5"; /* Unicode for bi-geo-alt */
+  }
+  
+  /* For bi-envelope-at (Check your email) */
+  .bi-envelope-at::before {
+    content: "\f3f9"; /* Unicode for bi-envelope-at */
+  }
+  
+  /* For bi-linkedin (Connect on LinkedIn) */
+  .bi-linkedin::before {
+    content: "\f0e1"; /* Unicode for bi-linkedin */
+  }
+  
+  /* For bi-instagram (Follow us on Instagram) */
+  .bi-instagram::before {
+    content: "\f16d"; /* Unicode for bi-instagram */
+  }
+  
+  /* For bi-phone (Make a call) */
+  .bi-phone::before {
+    content: "\f10b"; /* Unicode for bi-phone */
+  }
+  
+  .bi-translate::before {
+    content: "\f1e6"; /* Unicode for bi-translate */
+  }
+  
+  .bi-file-person::before {
+    content: "\f0f7";
+  }
+  
+  .bi-boxes::before {
+    content: "\F685";
+  }
+  
+  .bi-gear::before {
+    content: "\F3E3";
+  }
+  
+  .bi-pdf::after {
+    content: "\F63E";
+  }
+  
+  .bi-external::after {
+    content: "\F1C5";
+  }
+  
+  .bi-tick::before {
+    content: "\F26D";
+    color: #266CA9;
+    margin-left: -10px;
+  }
+  
+  /* New Inner Flex Box */
+  .inner-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #266CA9; /* Blue background color */
+    width: 80%;  /* 80% of the bottom-right flex box width */
+    height: 80%; /* 80% of the bottom-right flex box height */
+  }
+  
+  /* Optional content inside the inner flex box */
+  .inner-content {
+    color: white; /* White text for visibility */
+    font-size: 1.5rem; /* Larger font size for content */
+    text-align: center; /* Centered text */
+  }
+  
+  
+  /* Vertical Tabs */
+  .vertical-tab-container {
+      display: flex;
+      max-width: 80%;
+      width: 80%;
+      height: 80%;
+      margin: 0 auto;
+      background-color: #266CA9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+  }
+  
+  /* Vertical Tab Buttons */
+  .vertical-tab-buttons {
+      display: flex;
+      flex-direction: column;
+      min-width: 150px;
+      border-right: 2px solid rgba(245, 248, 252, 0.6);
+      background-color: #266CA9;
+  }
+  
+  .tab-button {
+      padding: 15px;
+      background-color: #266CA9;
+      color: #f5f8fc;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+  }
+  
+  .tab-button:hover {
+      background-color: rgba(245, 248, 252, 0.6);
+      color: #266CA9; /* Title color */
+  }
+  
+  .tab-button.active {
+      background-color: rgba(245, 248, 252, 0.6);
+      color: #266CA9; /* Title color */
+      font-weight: bold;
+      border-right: 3px solid #266CA9; /* Indicate the active tab */
+  }
+  
+  /* Tab Content */
+  .vertical-tab-content {
+      flex-grow: 1;
+      padding: 20px;
+  }
+  
+  .tab-content-item {
+      display: none;
+      /*height: 52vh;
+      overflow-y: auto;  /* Enable vertical scrolling when content overflows */
+  }
+  
+  .tab-content-item.active {
+      display: block;
+      /*background-color: rgba(245, 248, 252, 0.6);*/
+  }
+  
+  /* Custom scrollbar styles */
+  .tab__content-item::-webkit-scrollbar {
+      width: 8px;  /* Set width for the scrollbar */
+  }
+  
+  .tab__content-item::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);  /* Semi-transparent thumb color */
+      border-radius: 4px;  /* Rounded corners for the scrollbar thumb */
+  }
+  
+  .tab__content-item::-webkit-scrollbar-track {
+      background: #f1f1f1;  /* Light background for the scrollbar track */
+  }
+  
+  /* Optional: Add focus styles for accessibility */
+  .tab__content-item:focus {
+      outline: none;  /* Remove default focus outline */
+      border: 2px solid #266CA9;  /* Optional border color when focused */
+  }
+  
+  .tab__content-item.debug {
+      background: rgba(255, 0, 0, 0.2);  /* Add a red semi-transparent background */
+  }
+  
+  
+  
+  /* Horizontal Tabs */
+  .tabs {
+      background: #f5f8fc;
+      color: #266CA9;
+      border: 1px solid #266CA9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 80%;
+      height: 80%;
+      padding: 20px;
+  }
+  .tab__list {
+      display: flex;
+      justify-content: space-evenly;
+      cursor: pointer;
+      border-bottom: 2px solid #266CA9;
+      margin-bottom: 20px;
+  }
+  .tab__list > div {
+      padding: 10px 20px;
+      border-radius: 4px 4px 0 0;
+      transition: #266CA9 0.3s;
+
+  }
+  .tab__list > div:hover {
+      background-color: #266CA9;
+      color: #f5f8fc;
+  }
+  .tab__content > div {
+      display: none;
+      padding: 20px;
+      background: #f5f8fc;
+      color: #266CA9;
+      border-radius: 4px;
+  }
+  
+  .is--active {
+      font-weight: bold;
+      display: block !important;
+      border-bottom: 2px solid #266CA9;
+      background: #266CA9 !important;
+      color: #f5f8fc;
+  }
+  
+  .button-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+  }
+  
+  button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #266CA9;
+      color: #f5f8fc;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  
+  button:hover {
+      font-weight: bold;
+  }
+  
+  /* Flex container takes up 100% height and width */
+  .banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* 100% of the viewport height */
+    width: 3%;  /* 100% of the viewport width */
+    position: relative;
+  }
+  
+  /* The text container has 10% width and 100% height */
+  .banner-text-container {
+    width: 100%;
+    height: 100%;
+    background-color: #266CA9; /* Blue background */
+    color: #266CA9;  /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Semi-opaque greyish-blue overlay */
+  .banner-text-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(245, 248, 252, 0.3); /* Greyish-blue with opacity */
+    z-index: 1;  /* Overlay is above the background */
+  }
+  
+  /* Text rotation and z-index to place text on top of the overlay */
+  .banner-text-container span {
+    font-variant: small-caps;
+    transform: rotate(270deg); /* Rotate text by 90 degrees */
+    transform-origin: center; /* Keep the rotation centered */
+    z-index: 2; /* Place the text above the overlay */
+    position: relative;
+    white-space: nowrap; /* Ensure text doesn't wrap */
+    font-weight: bold;
+    font-family: Trebuchet MS;
+    font-size: 42px;
+    letter-spacing: 3px;
+  
+  }
+  
+  .box{
+      /*margin:0 10%;*/
+      height: 100%;
+      overflow: hidden;
+      width: 90%;
+      padding: 10px 0 40px 60px
+  }
+  
+  .box ul{
+      list-style-type: none;
+      margin-left: 5%;
+      padding: 0;
+      position: relative;
+      transition: all 0.5s linear;
+      top: 0;
+  }
+  
+  .box ul:last-of-type {
+    top: 0px /*80px*/
+  }
+  
+  .box ul:before{
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%;
+      border:1px dashed #266CA9;
+      position: absolute;
+      top:0;
+      left:30px
+  }
+  
+  .box ul li{
+      margin: 20px 60px 60px;
+      position: relative;
+      padding: 10px 10px;
+      background: #f5f8fc;
+      color:#266CA9;
+      border: 1px #266CA9;
+      /*border-radius: 10px;*/
+      line-height: 20px;
+      width: 92%;
+  }
+  
+  
+  .box ul li > span{
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%;
+      border:1px solid #266CA9;
+      position: absolute;
+      top:0;
+      left:-30px
+  }
+  
+  .box ul li > span:before,.box ul li > span:after{
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background:#266CA9;
+      border:2px solid #266CA9;
+      position: absolute;
+      left:-7.5px
+  }
+  
+  .box ul li > span:before{top:-10px}
+  .box ul li > span:after{top:100%}
+  
+  .box .degree{
+      font-weight: bold;
+      /*letter-spacing: 1px;*/
+      font-family: Trebuchet MS;
+      font-variant: small-caps;
+      font-size: 17px;
+      margin-bottom: 5px;
+      margin-left: 15px;
+  }
+  
+  .box .institute{
+      font-weight: bold;
+      /*letter-spacing: 1px;*/
+      font-family: Trebuchet MS;
+      font-variant: small-caps;
+      font-size: 15px;
+      margin-bottom: 15px;
+      margin-left: 15px;
+  }
+  
+  .box .degree-details:first-letter{
+    text-transform: capitalize;
+    padding-left: 20px; /* Remove default padding */
+    line-height: 1.7
+  }
+  
+  .box .name{
+      margin-top: 10px;
+      text-transform: capitalize;
+      font-style: italic;
+      text-align: right;
+      margin-right: 20px
+  }
+  
+  
+  .box .duration span{
+      position: absolute;
+      left: -100px;
+      color:#266CA9;
+      font-size:80%;
+      font-weight: bold;
+  }
+  .box .duration span:first-child{top:-16px}
+  .box .duration span:last-child{top:100%}
+  
+  
+  /*
+   CSS for the main interaction
+  */
+  .accordion > input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+  }
+  
+  .accordion .content {
+    overflow-y: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+  }
+  
+  .accordion > input[type="checkbox"]:checked ~ .content {
+    height: auto;
+    overflow: visible;
+  }
+  
+  .accordion label {
+    display: block;
+  }
+  
+  /*
+   Styling
+  .accordion {
+    margin-bottom: 1em;
+  }*/
+  
+  .accordion > input[type="checkbox"]:checked ~ .content {
+    padding: 15px;
+    border: 2px solid #266CA9;
+    background: rgba(245, 248, 252, 1);
+    border-top: 0;
+  }
+  
+  .accordion .handle {
+    margin: 0;
+    font-size: 1.125em;
+    line-height: 1.2em;
+  }
+  
+  .accordion label {
+    color: rgba(245, 248, 252, 1);
+    cursor: pointer;
+    font-weight: normal;
+    padding: 5px;
+    background: #266CA9;
+  }
+  
+  .accordion label:hover,
+  .accordion label:focus {
+    background: #266CA9;
+    color: rgba(245, 248, 252, 1);
+  }
+  
+  .accordion .handle label:before {
+    font-family: "Bootstrap Icons"; /* Ensure it uses Bootstrap Icons */
+    content: "\F4FE";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: .58em;
+    line-height: 1.556em;
+    vertical-align: middle;
+  }
+  
+  .accordion > input[type="checkbox"]:checked ~ .handle label:before {
+    content: "\f078";
+  }
+  
+  .accordion > input[type="checkbox"]:checked ~ .handle label {
+    border: 2px solid #266CA9;
+    color: rgba(245, 248, 252, 1);
+    background: #266CA9;
+    /*border-top: 0;*/
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Keep the text together */
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  
+  .bi-plus, .bi-dash {
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    color: rgba(245, 248, 252, 1);
+    position: relative;
+    left: -5px; /* Shift icon slightly to the left */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .bi-plus {
+    font-size: 20px;
+    content: "\F4FE";
+    display: inline-block;
+  }
+  
+  .bi-dash {
+    font-size: 20px;
+    content: "\F2EA";
+    display: none; /* Initially hide the minus icon */
+  }
+  
+  input[type="checkbox"]:checked + label .bi-plus {
+    display: none; /* Hide the plus icon when checked */
+  }
+  
+  input[type="checkbox"]:checked + label .bi-dash {
+    display: inline-block; /* Show the minus icon when checked */
+  }
+  
+  /* Overall container */
+  .tab-data {
+    height: 50vh;
+    overflow-y: scroll;  /* Enable vertical scrolling when content overflows */
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    background-color: #266CA9;
+    color: #f5f8fc;
+    font-family: Trebuchet MS;
+    font-variant: small-caps;
+    text-align: left;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    font-family: Trebuchet MS;
+    font-size: 13px;
+    color: #266CA9;
+    text-align: left;
+  }
+  
+  /* Header: when-where and what-where side-by-side */
+  .what-where {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+  }
+  
+  .when-where {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 18%; /* Empty column takes up 20% of the space */
+    margin-bottom: 10px;
+  }
+  
+  .when {
+    font-size: 17px;
+    padding-bottom: 3px;
+    letter-spacing: 0;
+  }
+  
+  .what {
+    font-size: 17px;
+    padding-bottom: 3px;
+    letter-spacing: 0;
+  }
+  
+  .where {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    gap: 30px; /* Space between the two columns */
+    padding: 10px 3px 3px 7px;
+  }
+  
+  /* Content: empty-column and data-list side-by-side */
+  .content {
+    display: flex;
+    flex-direction: row;
+    gap: 30px; /* Space between the columns */
+    padding: 10px 10px 3px 10px;
+  }
+  
+  /* Styling for empty column */
+  .empty-column {
+    flex: 0 0 18%; /* Empty column takes up 20% of the space */
+  }
+  
+  /* Data-list styling */
+  .data-list {
+    flex: 1; /* The data-list takes up the remaining space */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Styling for each label-value pair */
+  .data-item {
+    display: flex;
+    justify-content: flex-start; /* Align both columns to the left */
+    margin-bottom: 2px; /* Space between the label and value columns */
+  }
+  
+  .data-item:last-child {
+    margin-bottom: 30px; /* Space between the label and value columns */
+  }
+  
+  /* Styling for the label */
+  .label {
+    font-weight: bold;
+    flex: 0 0 18%; /* Fixed width for label column */
+  }
+  
+  /* Styling for the value */
+  .value {
+    font-weight: normal;
+    flex: 0 0 82%; /* Fixed width for label column */
+    margin-bottom: 1px;
+    word-wrap: break-word; /* Ensures long text wraps */
+    overflow-wrap: break-word; /* Adds support for breaking words */
+  }
+  
+  
+  
+  /* Timeline Styles */
+  .single-node-timeline {
+      position: relative;
+  }
+  
+  .single-node-timeline-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      position: relative;
+  }
+  
+  /* Year */
+  .node-year {
+    font-size: 17px;
+    font-family: Trebuchet MS;
+    font-variant: small-caps;
+      font-weight: bold;
+      width: 10%;
+      text-align: left;
+      color: #266CA9;
+      margin-right: 10px;
+  }
+  
+  /* Card Styles */
+  .node-card {
+      width: 55%;
+      border: 1px solid #266CA9;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card Header */
+  .node-card-header {
+    font-size: 17px;
+    font-family: Trebuchet MS;
+    font-variant: small-caps;
+      display: flex;
+      font-weight: bold;
+      padding: 5px;
+      background-color: #266CA9;
+      color: rgba(245, 248, 252, 1);
+  }
+  
+  /* Card Content */
+  .node-card-content {
+    font-size: 13px;
+    font-family: Trebuchet MS;
+      background-color: rgba(245, 248, 252, 1);
+      color: #266CA9;
+      display: flex;
+      font-weight: normal;
+      padding: 5px;
+  }
+  
+  .trotting-container {
+    display: flex;
+    width: 75%;
+    align-items: center;
+    justify-content: space-around;;
+    padding-top: 1%;
+    gap: 2%; /* 2% gap between the items */
+  }
+  
+  .trotting-item {
+    flex: 1; /* Each item will take equal space */
+    height: 100%;
+    position: relative;
+    border: 1px solid #266CA9;
+  }
+  
+  .trotting-item img {
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    padding: 2px;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures image covers the entire flex item */
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  
+  .resonating-words {
+    font-weight: normal;
+  }
+  
+  /* Media query for mobile devices */
+  @media screen and (max-width: 768px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  
+    /* Reorder sections using flex order */
+    .right-flex {
+      order: 1; /* Show navbar first */
+    }
+  
+    .middle-flex {
+      order: 2; /* Show main content second */
+    }
+  
+    .banner-container {
+      order: 3;
+    }
+  
+    .left-flex {
+      order: 4;
+    }
+  
+    /* Optimize content visibility */
+    .middle-flex {
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    .main-middle {
+      margin-top: 60px; /* Add space for fixed navbar */
+    }
+  
+    /* Make navbar sticky */
+    .top-right {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      z-index: 999;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  
+    /* Adjust other content spacing */
+    .banner-container {
+      margin-top: 20px;
+    }
+  
+    /* Hide non-essential elements initially */
+    .empty-div, 
+    .bottom-right {
+      display: none;
+    }
+  
+    .image-container img {
+      max-width: 200px;
+      height: auto;
+    }
+  
+    .section-pair {
+      margin: 1rem 0;
+    }
+  
+    /* Navigation menu for mobile */
+    .nav {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      display: block;
+    }
+  
+    .nav.active {
+      transform: translateX(0);
+    }
+  
+    .nav li {
+      display: block;
+      width: 100%;
+    }
+  
+    .parent-menu .sub-menu {
+      position: static;
+      width: 100%;
+      display: none;
+    }
+  
+    .parent-menu:hover .sub-menu {
+      display: block;
+    }
+  
+    /* Banner adjustments */
+    .banner-container {
+      padding: 0.5rem;
+    }
+  
+    .banner-text-container {
+      font-size: 0.9rem;
+    }
+  
+    /* Navbar styling */
+    .nav {
+      padding-top: 70px; /* Space for menu icon */
+    }
+  
+    .nav li {
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .nav li a {
+      font-size: 16px;
+      display: block;
+      width: 100%;
+    }
+  
+    /* Sub-menu styling */
+    .sub-menu {
+      width: 100%;
+      margin-top: 10px;
+      background: #f8f8f8;
+      border-radius: 8px;
+    }
+  
+    .sub-menu li {
+      padding: 10px 15px;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .sub-menu li:last-child {
+      border-bottom: none;
+    }
+  
+    /* Menu toggle button styling */
+    .menu-toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1001;
+    }
+  
+    .menu-toggle i {
+      font-size: 24px;
+    }
+  
+    /* Active menu state */
+    .nav.active {
+      padding-top: 70px;
+      width: 80%; /* Adjust menu width */
+      max-width: 300px;
+    }
+  
+    /* Icons in list items */
+    .detail ul li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+    }
+  
+    .detail ul li i {
+      font-size: 18px;
+      min-width: 24px;
+    }
+  
+    /* Improve touch targets */
+    .nav li a,
+    .sub-menu li,
+    .menu-toggle {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  /* Additional refinements for smaller screens */
+  @media screen and (max-width: 480px) {
+    .nav.active {
+      width: 90%;
+    }
+  
+    .menu-toggle {
+      top: 10px;
+      right: 10px;
+    }
+  
+    .detail ul li {
+      font-size: 14px;
+    }
+  
+    .detail ul li i {
+      font-size: 16px;
+    }
+  }
+  
+  

@@ -1,0 +1,11 @@
+.navbar{
+    background-color: #23036a;
+    height: 110px;
+}
+.navbar-brand {
+    color: #fff !important;
+    font-size: 40px;
+}
+.form-select{
+    width:200px;
+}

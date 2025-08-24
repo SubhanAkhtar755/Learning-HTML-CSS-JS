@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz MCQs</title>
+    <link rel="stylesheet" href="css/Quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz Challenge</h1>
+        
+        <!-- Math Quiz Section -->
+        <div class="quiz-section" id="mathQuiz">
+            <h2>HTML Quiz</h2>
+            <div class="progress-bar">
+                <div class="progress" id="mathProgress"></div>
+            </div>
+            <div id="mathQuestion" class="question"></div>
+            <div id="mathOptions" class="options"></div>
+            <div class="score">Score: <span id="mathScore">0</span></div>
+        </div>
+
+        <!-- Science Quiz Section -->
+        <div class="quiz-section" id="scienceQuiz">
+            <h2>CSS Quiz</h2>
+            <div class="progress-bar">
+                <div class="progress" id="scienceProgress"></div>
+            </div>
+            <div id="scienceQuestion" class="question"></div>
+            <div id="scienceOptions" class="options"></div>
+            <div class="score">Score: <span id="scienceScore">0</span></div>
+        </div>
+
+        <!-- History Quiz Section -->
+        <div class="quiz-section" id="historyQuiz">
+            <h2>JAVASCRIPT Quiz</h2>
+            <div class="progress-bar">
+                <div class="progress" id="historyProgress"></div>
+            </div>
+            <div id="historyQuestion" class="question"></div>
+            <div id="historyOptions" class="options"></div>
+            <div class="score">Score: <span id="historyScore">0</span></div>
+        </div>
+
+        <!-- Add this at the bottom of quiz-container -->
+        <button onclick="resetAllQuizzes()" class="reset-button">Reset All Quizzes</button>
+        
+        <!-- Password Prompt Modal -->
+        <div id="passwordPrompt" class="password-modal">
+            <div class="password-content">
+                <h3>Enter Admin Password</h3>
+                <input type="password" id="resetPassword" placeholder="Enter password">
+                <div id="passwordError" class="password-error">Incorrect password!</div>
+                <div class="password-buttons">
+                    <button onclick="checkPasswordAndReset()">Submit</button>
+                    <button onclick="closePasswordPrompt()" class="cancel-button">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/Quiz.js"></script>
+</body>
+</html> 

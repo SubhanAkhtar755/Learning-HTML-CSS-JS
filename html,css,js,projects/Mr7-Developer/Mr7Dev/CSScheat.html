@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cheat Sheet</title>
+    <link rel="stylesheet" href="css/CSScheat.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSS Cheat Sheet</h1>
+        <input type="text" class="search-box" placeholder="Search CSS properties...">
+
+        <div class="category">
+            <h2>Selectors</h2>
+            <div class="code-block">
+                <pre>
+<span>/* Basic Selectors */</span>
+.class-name     /* Class selector */
+#id-name        /* ID selector */
+div             /* Element selector */
+div p           /* Descendant selector */
+div > p         /* Child selector */
+div + p         /* Adjacent sibling */
+div ~ p         /* General sibling */
+[attr="value"]  /* Attribute selector */
+
+<span>/* Pseudo-classes */</span>
+:hover          /* Mouse over */
+:focus          /* Element has focus */
+:first-child    /* First child element */
+:last-child     /* Last child element */
+:nth-child(n)   /* nth child element */
+
+<span>/* Pseudo-elements */</span>
+::before        /* Before element */
+::after         /* After element */
+::first-line    /* First line */
+::first-letter  /* First letter */</pre>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Box Model</h2>
+            <div class="code-block">
+                <pre>
+<span class="clr">.box {</span>
+<span>/* Content dimensions */</span>
+    width: 200px;
+    height: 100px;
+<span>/* Padding */</span>
+    padding: 10px;             /* All sides */
+    padding: 10px 20px;        /* Top/bottom left/right */
+    padding: 10px 20px 15px;   /* Top left/right bottom */
+    padding: 10px 20px 15px 25px; /* Top right bottom left */
+<span>/* Border */</span>
+    border: 1px solid black;
+    border-radius: 5px;
+<span>/* Margin */</span>
+    margin: 10px;
+<span>/* Box sizing */</span>
+    box-sizing: border-box;
+    <span class="clr">}</span>
+</pre>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Flexbox</h2>
+            <div class="code-block">
+                <pre>
+<span class="clr">.container { </span>
+    display: flex;
+<span>/* Main axis */</span>
+    justify-content: flex-start | center | flex-end | space-between | space-around;
+<span>/* Cross axis */</span>
+    align-items: stretch | flex-start | center | flex-end;
+<span>/* Multiple lines */</span>
+    flex-wrap: nowrap | wrap | wrap-reverse;
+<span>/* Direction */</span>
+    flex-direction: row | column | row-reverse | column-reverse;
+    <span class="clr">}</span>
+<span class="clr">.item { </span>
+    flex: 1;                    /* Flex grow */
+    flex: 1 1 auto;            /* grow shrink basis */
+    align-self: center;        /* Individual alignment */
+    order: 1;                  /* Order in flex container */
+    <span class="clr">}</span>
+</pre>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Grid</h2>
+            <div class="code-block">
+                <pre>
+<span class="clr">.grid-container {</span>
+    display: grid;
+<span>/* Define columns/rows */</span>
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+<span>/* Gaps */</span>
+    gap: 20px;
+<span>/* Areas */</span>
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+        <span class="clr">}</span>
+<span class="clr">.grid-item {</span>
+    grid-column: 1 / 3;        /* Column start/end */
+    grid-row: 1 / 2;          /* Row start/end */
+    grid-area: header;        /* Named area */
+    <span class="clr">}</span>
+</pre>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Positioning</h2>
+            <div class="code-block">
+                <pre>
+<span class="clr">.element {</span>
+    position: static | relative | absolute | fixed | sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+<span>/* Float */</span>
+    float: left | right | none;
+    clear: both;
+<span>/* Display */</span>    
+    display: block | inline | inline-block | none;
+    <span class="clr">}</span>
+</pre>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Animations & Transitions</h2>
+            <div class="code-block">
+                <pre>
+<span>/* Transition */</span>
+<span class="clr">.element {</span>
+    transition: all 0.3s ease;
+    transition: property duration timing-function delay;
+    <span class="clr">}</span>
+<span>/* Animation */</span>
+<span class="clr">@keyframes slidein {</span>
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+<span class="clr">}</span>
+<span class="clr">.animated {</span>
+    animation : slidein 1s ease infinite;
+    animation : name duration timing-function delay iteration-count direction fill-mode;
+    <span class="clr">}</span>
+</pre>
+            </div>
+        </div>
+    </div>
+    <script src="js/cssCheat.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="color.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+ <div class="Navbar1st">
+    <nav class="navbar ">
+        <div class="nav-brand">
+            <a href="/">Logo</a>
+        </div>
+
+        <div class="nav-toggle" id="navToggle1">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="pages/about.html">About</a>
+                <ul class="dropdown-content">
+                    <li><a href="pages/yellow_brick_road.html">Yellow Brick Road</a></li>
+                    <li><a href="pages/scholarly_endeavours.html">Scholarly Endeavours</a></li>
+                    <li><a href="pages/15_minutes_of_fame.html">15 Minutes of Fame</a></li>
+                    <li><a href="pages/360_view.html">360&deg; View</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="pages/initiatives.html">Initiatives</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Scribeneur</a></li>
+                    <li><a href="#">The Digital Patrol</a></li>
+                    <li><a href="#">SAIA</a></li>
+                    <li><a href="#">Nawa-e-Zeest</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="pages/causes.html">Causes</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Alzheimer</a></li>
+                    <li><a href="#">Autism</a></li>
+                    <li><a href="#">Diabetes</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="/services">Blog</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Events Calendar</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+ </div>
+
+    <div class="Navbar2nd">
+       
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="/">Logo</a>
+            </div>
+    
+            <div class="nav-toggle" id="navToggle2">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="pages2/about2.html">About</a>
+                    <ul class="dropdown-content">
+                        <li><a href="pages2/yellow_brick_road2.html">Yellow Brick Road</a></li>
+                        <li><a href="pages2/scholarly_endeavours2.html">Scholarly Endeavours</a></li>
+                        <li><a href="pages2/15_minutes_of_fame2.html">15 Minutes of Fame</a></li>
+                        <li><a href="pages2/360_view2.html">360&deg; View</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="pages2/initiatives2.html">Initiatives</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Scribeneur</a></li>
+                        <li><a href="#">The Digital Patrol</a></li>
+                        <li><a href="#">SAIA</a></li>
+                        <li><a href="#">Nawa-e-Zeest</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="pages2/causes2.html">Causes</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Alzheimer</a></li>
+                        <li><a href="#">Autism</a></li>
+                        <li><a href="#">Diabetes</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="/services">Blog</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Announcements</a></li>
+                        <li><a href="#">Events Calendar</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main content section -->
+    <div class="main-content">
+        <div class="content-container">
+            <h1>Welcome to Our Website</h1>
+            <p>This site is in restoration process. It is not mobile friendly. About pages have informative content.</p>
+            
+            <div class="featured-section">
+                <h2>Current Initiatives</h2>
+                <p>Join us in our journey to make technology more accessible and impactful. Together, we can build a better digital future.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add mobile menu toggle button -->
+    <button class="mobile-sidebar-toggle" id="mobileSidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Add this sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <!-- Made image responsive -->
+            <div class="sidebar-image">
+                <img src="images/image.png" alt="Profile Image" class="profile-image">
+            </div>
+
+            <!-- Added mobile-friendly classes -->
+            <div class="sidebar-section mobile-collapsible">
+                <h3 class="section-header">Interests</h3>
+                <ul class="section-content">
+                    <li><a href="#">Computer Vision</a></li>
+                    <li><a href="#">Data Analysis, Data Science</a></li>
+                    <li><a href="#">Enterprise Application Integration</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section mobile-collapsible">
+                <h3 class="section-header">Tech Stack</h3>
+                <ul class="section-content">
+                    <li><a href="#" data-lang="en">Java, Grails, Python, Bash Scripting</a></li>
+                    <li><a href="#" data-lang="en">Angular JS, React JS</a></li>
+                    <li><a href="#" data-lang="es">SQL, PL/SQL</a></li>
+                    <li><a href="#" data-lang="fr">Cloud Foundry, Kafka, Kubernetes</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section mobile-collapsible">
+                <h3 class="section-header">Contact</h3>
+                <div class="section-content contact-info">
+                    <p><i class="fas fa-envelope"></i>+1 [M<span class="zero">0</span>G] [PJG] [<span
+                            class="zero">0</span>TMT]</p>
+                    <p><i class="fas fa-phone"></i>shazia at thedigitalpatrol dot com</p>
+                    <p><i class="fas fa-map-marker-alt"></i>British Columbia, Canada</p>
+                    <p><i class="fas fa-map-marker-alt"></i><a href="www.linkedin.com/in/c7789546401">LinkedIn</a>, <a
+                            href="/files/ShaziaJaved_LatestResume.pdf" download>Résumé</i></a>, <a
+                            href="/files/ShaziaJaved_LatestCV.pdf" download>CV</a>, <a
+                            href="/files/ShaziaJaved_LatestCV.pdf" download>One-Pager </a></p>
+
+                </div>
+            </div>
+
+            <div class="sidebar-section mobile-collapsible">
+                <h3 class="section-header">Languages</h3>
+                <ul class="section-content">
+                    <li><a href="#" data-lang="en">Native: Urdu, English</a></li>
+                    <li><a href="#" data-lang="es">Beginner: Arabic, Gaelic, Mandarin</a></li>
+                    <li><a href="#" data-lang="fr">Intermediate: Korean, Pashto</a></li>
+                    <li><a href="#" data-lang="fr">CEFR A1: French</a></li>
+                    <li><a href="#" data-lang="fr">CEFR B1: Estonian, Russian</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

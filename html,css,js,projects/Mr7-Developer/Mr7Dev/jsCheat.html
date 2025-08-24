@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Cheat Sheet</title>
+    <link rel="stylesheet" href="css/jsCheat.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Cheat Sheet</h1>
+        <input type="text" class="search-box" placeholder="Search for JavaScript concepts...">
+
+        <div class="category">
+            <h2>Variables & Data Types</h2>
+            <div class="code-block">
+                <pre>
+<span>// Variable declaration</span>
+let variable = 'value';
+const constant = 'unchangeable';
+var oldWay = 'not recommended';
+
+<span>// Data Types</span>
+let string = 'text';
+let number = 42;
+let boolean = true;
+let array = [1, 2, 3];
+let object = { key: 'value' };
+let nullValue = null;
+let undefined;</pre>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Functions</h2>
+            <div class="code-block">
+                <pre>
+<span>// Regular function</span>
+function add(a, b) {
+    return a + b;
+}
+
+<span>// Arrow function</span>
+const multiply = (a, b) => a * b;
+
+<span>// Function expression</span>
+const greet = function(name) {
+    return `Hello, ${name}!`;
+};</pre>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Arrays</h2>
+            <div class="code-block">
+                <pre>
+const fruits = ['apple', 'banana', 'orange'];
+
+<span>// Array methods</span>
+fruits.push('grape');     // Add to end
+fruits.pop();            // Remove from end
+fruits.unshift('lemon'); // Add to start
+fruits.shift();          // Remove from start
+fruits.slice(1, 3);      // Get subset
+fruits.splice(1, 1);     // Remove elements
+
+<span>// Array iteration</span>
+fruits.forEach(fruit => console.log(fruit));
+const newArray = fruits.map(fruit => fruit.toUpperCase());</pre>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Objects</h2>
+            <div class="code-block">
+                <pre>
+const person = {
+    name: 'John',
+    age: 30,
+    greet() {
+        return `Hello, I'm ${this.name}`;
+    }
+};
+
+<span>// Object operations</span>
+Object.keys(person);   // Get all keys
+Object.values(person); // Get all values
+Object.entries(person); // Get key-value pairs</pre>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>ES6+ Features</h2>
+            <div class="code-block">
+                <pre>
+<span>// Destructuring</span>
+const { name, age } = person;
+const [first, second] = array;
+
+<span>// Spread operator</span>
+const newArray = [...oldArray];
+const newObject = { ...oldObject };
+
+<span>// Template literals</span>
+const message = `Hello ${name}!`;
+
+<span>// Optional chaining</span>
+const value = object?.property?.subProperty;
+
+<span>// Nullish coalescing</span>
+const result = value ?? defaultValue;</pre>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Promises & Async</h2>
+            <div class="code-block">
+                <pre>
+<span>// Promise</span>
+const promise = new Promise((resolve, reject) => {
+ <span>   // Async operation</span>
+    if (success) {
+        resolve(result);
+    } else {
+        reject(error);
+    }
+});
+
+<span>// Async/Await</span>
+async function getData() {
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(error);
+    }
+}</pre>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>DOM Manipulation</h2>
+            <div class="code-block">
+                <pre>
+<span>// Selecting elements</span>
+const element = document.querySelector('.class');
+const elements = document.querySelectorAll('.class');
+
+<span>// Modifying elements</span>
+element.innerHTML = 'New content';
+element.classList.add('new-class');
+element.style.color = 'red';
+
+<span>// Event handling</span>
+element.addEventListener('click', (e) => {
+    e.preventDefault();
+   <span> // Handle event</span>
+});</pre>
+            </div>
+        </div>
+    </div>
+    <script src="js/jsCheat.js"></script>
+</body>
+</html>
