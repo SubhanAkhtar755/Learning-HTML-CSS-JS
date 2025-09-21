@@ -1,0 +1,96 @@
+* {
+  color: black;
+  margin: 10px;
+  padding: 1px;
+}
+.navbar-brand {
+  color: black !important;
+}
+.post {
+  display: flex;
+  justify-content: flex-start;
+}
+.btn {
+  font-size: 17px;
+  border: 2px solid black;
+  background-color: #ff004f;
+  position: absolute;
+  left: 80px;
+  color: white;
+}
+input {
+  position: absolute;
+  left: 145px;
+  padding: 0px;
+  width: 260px;
+  border: none;
+}
+.bdr {
+  width: 422px;
+  position: relative;
+  border: 2px solid;
+  background: wheat;
+  margin: 10px;
+}
+textarea {
+  width: 422px;
+  border: none;
+}
+label {
+  font-size: 22px;
+  font-weight: bold;
+}
+.btn1:focus,
+textarea:focus {
+  outline: none;
+  border: none;
+}
+.image1 {
+  width: 50px;
+  height: 50px;
+  margin-left: 42px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+ 
+ 
+}
+
+
+.image1-select{
+    border: 4px solid black;
+}
+.rightside{
+
+position: absolute;
+left: 500px;
+top: 110px;
+height: 290px;
+width: 740px !important;
+}
+.imgw1{
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+}
+.wid{
+    width:700px ;
+}
+
+.swal2-confirm{
+    width: 400px !important;
+}
+.card{
+   
+    background-size: cover;
+}
+@media only screen and (max-width: 400px ) {
+    .rightside{
+margin: 5px;
+        position: absolute;
+        left: 0px;
+        top: 510px;
+        height: 190px;
+        width: 422px;
+        }
+}

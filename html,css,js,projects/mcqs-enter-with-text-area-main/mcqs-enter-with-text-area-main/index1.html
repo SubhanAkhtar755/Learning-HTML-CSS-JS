@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  
+    <link rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        <textarea
+          id="allmcqs"
+          rows="15"
+          cols="40"
+          placeholder="Enter Mcq,s Data"
+        ></textarea>
+      </div>
+      <div><button onclick="mcqs()">submit</button>
+       </div>
+     
+       <div><style>
+        table, th, td {
+          border:2px solid #ff004f;
+          width: 314px;
+          border-radius: 5px;
+          margin-top: 5px;
+        }
+        .edit td{
+       word-spacing: 15PX;
+       
+        }
+        .edit1 td{
+     text-align: center;
+      
+       
+      }
+        </style>
+        <body>
+        
+       
+        
+        <table "sty100%">
+          <tr>
+            <th colspan="4"> Write Total MCQS</th>
+           
+          </tr>
+          <tr class="edit1">
+            <td colspan="4" id="totalMcqs">0</td>
+           
+          </tr>
+          <tr class="edit" >
+            <td colspan="4" id="text">* Please Write & Submit Mcq,s </td>
+           
+          </tr>
+        </table>
+        
+      </div>
+    </div>
+    <div class="main1" id="render">
+     
+    </div>
+
+
+
+
+
+
+
+   
+    <script src="app.js"></script>
+  </body>
+</html>

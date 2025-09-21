@@ -1,0 +1,703 @@
+  //......<My Portfolio Website Code>.......//                
+
+
+                .......<HTML file code>.......
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M.Subhan Portofolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e7acf4eedc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="front"><img src="images/WhatsApp Image 2024-11-11 at 1.01.06 AM.jpeg" alt=""></div>
+    <div id="header">
+      
+      <div class="container">
+        <nav>
+          <img src="images/logo.jpeg" class=" logo logo1" />
+          <ul id="side-menu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars teenlines" onclick="openmenu()"></i>
+        </nav>
+       
+        <div class="header-text">
+          <p>Web/App Development</p>
+          <h1>Hi, I'm <span>M.Subhan</span><br />Akhtar From Pakistan</h1>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------about -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/front.jpeg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I’m Subhan, a Web Developer with 1 years of experience turning
+              ideas into high-converting, custom websites .<br />
+              Skilled in HTML, CSS, JavaScript. ??As an experienced web
+              developer, I am passionate about creating robust<br />
+              and user-friendly web applications. ??Proficient in front-end
+              technologies like HTML, CSS, JavaScript, and<br />
+              frameworks such as React.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick='opentab("Skills")'>
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('Experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('Education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designing Web/App Interfaces</li>
+                <br />
+                <li><span>Web Development</span><br />Web App Development</li>
+                <br />
+                <li>
+                  <span>App Development</span><br />Building Android/IOS apps
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Experience">
+              <ul>
+                <li>
+                  <span>2024-2025(SENIOR WEB DEVELOPER)</span><br />UI/UX Design
+                  Training At Saylani Mass IT Training
+                </li>
+                <br />
+                <li>
+                  <span>2025 (Web Development)</span><br />I'm beginer in this
+                  field Web$App Development
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li>
+                  <span>2022-2024</span><br />The Islamia University of
+                  Bahawalpur(ADP-CS)
+                </li>
+                <br />
+                <li>
+                  <span>2020-2022</span><br />Superior College Hasilpur(FSC
+                  Pre-Enginering)
+                </li>
+                <br />
+                <li>
+                  <span>2018-2020</span><br />Sir Syed Model High
+                  School(Biology)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------services----------- -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              ??As an experienced web developer, I am passionate about creating robust
+              and user-friendly web applications. 
+            </p>
+            <a href="#">learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              ??Proficient in front-end technologies like HTML, CSS, JavaScript, and
+              frameworks such as React.
+            </p>
+            <a href="#">learn more</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store-ios"></i>
+            <h2>App Design</h2>
+            <p>
+              Your business deserves a website that works as hard as you do. 
+            </p>
+            <a href="#">learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------portfolio----------- -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.png" />
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>
+                The App Connect You To The Talented People Around The World .
+                Download it from playstore .
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-2.png" />
+            <div class="layer">
+              <h3>Music App</h3>
+              <p>2024-2025(SENIOR WEB DEVELOPER)<br/>
+                UI/UX Design Training At Saylani Mass IT Training
+
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-3.png" />
+            <div class="layer">
+              <h3>Online Shopping App</h3>
+              <p>
+                2025 (Web Development)<br/>
+                I'm beginer in this field Web$App Development .
+              </p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+      </div>
+    </div>
+    <!-- ----------contact---------- -->
+    <div id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fas fa-paper-plane"></i>akhtarsubhan740@gmail.com</p>
+            <p><i class="fas fa-phone-square-alt"></i>+92311-6986045</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/ch.subhan.92775838?mibextid=kFxxJD" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/m.subhan.07/profilecard/?igsh=MTl1cThpZWt6cTZlMA==" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/subhan-akhtar-109246329/?trk=opento_sprofile_details"
+              target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://wa.me/qr/VSV3JUUZ47ADA1" target="_blank"><i class="fab fa-whatsapp"></i></i></a>
+            </div>
+            <a href="index1.html" target="_blank" class="btn btn2">My Web CV</a>
+            <a href="images/My-CV" download class="btn btn2">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required> 
+              <input type="email" name="Email" placeholder="Your Email" required> 
+              <textarea name="Message" rows="6" placeholder="Your Message" ></textarea>
+              <button type="submit" class="btn btn2" >Submit</button>
+            </form>
+            <span id="Msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p>Copyright © M.Subhan . Made with <i class="fas fa-heart"></i> by HTML , CSS and JavaScript</p>
+      </div>
+    </div>
+
+
+    
+    <script src="app.js"></script>
+
+    <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxYYvl-4Qcxt6zDJ9gp3TrbTRqDVWysYienmJe0-t67eKTeAhyzf9wMV3xuwPH6SGD4/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    const Msg = document.getElementById("Msg")
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+            Msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+                Msg.innerHTML = ""
+            }, 3000)
+            form.reset();
+        })
+        .catch((error) => console.error("Error!", error.message));
+    });
+    </script>
+  </body>
+</html>
+
+
+                ......<CSS file code>......
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "sans-serif";
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: black;
+  color: #fff;
+}
+
+.front img {
+  width: 400px;
+  height: 430px;
+  border-radius: 15px;
+  position: absolute;
+  left: 830px;
+  top: 70px;
+}
+
+.container {
+  padding: 1px 4%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo {
+  width: 340px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0px 15px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+.header-text {
+  margin-top: 30%;
+  font-size: 30px;
+}
+
+.header-text h1 {
+  font-size: 50px;
+  margin-top: 20px;
+}
+.header-text h1 span {
+  color: #ff004f;
+}
+/* <!-- ---------------about --> */
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1 {
+  flex-basis: 35%;
+}
+.about-col-1 img {
+  width: 100%;
+
+  border-radius: 15px;
+}
+.about-col-1 img:hover {
+  box-shadow: 2px 2px 20px white;
+}
+.about-col-2 {
+  flex-basis: 60%;
+}
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links {
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: 200;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 50%;
+}
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px o;
+}
+.tab-contents ul li span {
+  color: #b54769;
+  font-size: 14px;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+/* <!-- --------services----------- --> */
+#services {
+  padding: 30px 0;
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.services-list div {
+  background: #262626;
+  padding: 20px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.4s, transform 0.5s;
+}
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover {
+  background: #ff004f;
+  transform: translateY(-10px);
+}
+/* <!-- -----------------portfolio----------- --> */
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img {
+  transform: scale(1.1);
+}
+.work:hover .layer {
+  height: 100%;
+}
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+.btn:hover {
+  background: #ff004f;
+}
+/* <!-- ----------contact---------- --> */
+.contact-left {
+  flex-basis: 35%;
+}
+.contact-right {
+  flex-basis: 60%;
+}
+.contact-left p {
+  margin-top: 30px;
+}
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+.btn.btn2 {
+  display: inline-block;
+  background: #ff004f;
+}
+.contact-right form {
+  width: 100%;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.copy-right {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.copy-right i {
+  color: #ff004f;
+}
+nav .fas {
+  display: none;
+}
+#Msg {
+  color: #61b752;
+  margin-top: -30px;
+  display: block;
+}
+form .btn.btn2 {
+  background: #080808;
+  transition: transform 0.5s;
+}
+form .btn.btn2:hover {
+  background: #ff004f;
+  transform: translateY(-5px);
+}
+/* ---------------Css for small screen-------------- */
+@media only screen and (max-width: 600px) {
+  nav .fas {
+   z-index: 1;
+    position: absolute;
+    left: 320px;
+    top: 40px;
+  }
+  
+  .logo1{
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    right:55px ;
+  }
+  .front img {
+    z-index: 1;
+    width: 240px;
+    height: 240px;
+    border-radius: 150px;
+    position: absolute;
+    left: 65px;
+    top:93px;
+    box-shadow: 2px 2px 20px white !important;
+    
+  }
+
+  .header-text {
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .header-text h1 {
+    font-size: 30px;
+  }
+  nav .fas {
+    display: block;
+    font-size: 25px;
+  }
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fas {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .sub-title {
+    font-size: 40px;
+  }
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+  .about-col-2 {
+    font-size: 14px;
+  }
+  .tab-links {
+    font-size: 15px;
+    margin-right: 20px;
+  }
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  .copy-right {
+    font-size: 10px;
+  }
+}
+
+
+              ......<javascript file code>......
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname) {
+  for (const tablink of tablinks) {
+    tablink.classList.remove("active-link");
+  }
+  for (const tabcontent of tabcontents) {
+    tabcontent.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+
+
+var sidemenu = document.getElementById("side-menu");
+function openmenu() {
+  sidemenu.style.right = "0";
+}
+function closemenu() {
+  sidemenu.style.right = "-200px";
+}
+
+
+
+
+                  //......<The End>......//
+

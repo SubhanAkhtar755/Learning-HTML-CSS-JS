@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M.Subhan Portofolio Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" href="icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" href="icons/icon-128x128.png" />
+  <link rel="apple-touch-icon" href="icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" href="icons/icon-152x152.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" href="icons/icon-512x512.png" />
+  <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+  <meta name="theme-color" content="#db4938" />
+  <script src="https://kit.fontawesome.com/e7acf4eedc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="front"><img src="images/WhatsApp Image 2024-11-11 at 1.01.06 AM.jpeg" alt=""></div>
+  <div id="header">
+
+    <div class="container">
+      <nav id="nav">
+        <img src="images/logo.jpeg" class=" logo logo1" />
+        <ul id="side-menu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="" onclick="seemore()">Explore Projects</a></li>
+          <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars teenlines " onclick="openmenu()"></i>
+      </nav>
+
+      <div class="header-text">
+        <p>Web/App Development</p>
+        <h1>Hi, I'm <span>M.Subhan</span><br />Akhtar From Pakistan</h1>
+      </div>
+    </div>
+  </div>
+  <!-- ---------------about -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/front.jpeg" />
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            I’m Subhan, a Web Developer with 1 years of experience turning
+            ideas into high-converting, custom websites .<br />
+            Skilled in HTML, CSS, JavaScript. 🌍As an experienced web
+            developer, I am passionate about creating robust<br />
+            and user-friendly web applications. 🌍Proficient in front-end
+            technologies like HTML, CSS, JavaScript, and<br />
+            frameworks such as React.
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick='opentab("Skills")'>
+              Skills
+            </p>
+            <p class="tab-links" onclick="opentab('Experience')">
+              Experience
+            </p>
+            <p class="tab-links" onclick="opentab('Education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="Skills">
+            <ul>
+              <li><span>UI/UX</span><br />Designing Web/App Interfaces</li>
+              <br />
+              <li><span>Web Development</span><br />Web App Development</li>
+              <br />
+              <li>
+                <span>App Development</span><br />Building Android/IOS apps
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Experience">
+            <ul>
+              <li>
+                <span>2024-2025(SENIOR WEB DEVELOPER)</span><br />UI/UX Design
+                Training At Saylani Mass IT Training
+              </li>
+              <br />
+              <li>
+                <span>2025 (Web Development)</span><br />I'm beginer in this
+                field Web$App Development
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Education">
+            <ul>
+              <li>
+                <span>2022-2024</span><br />The Islamia University of
+                Bahawalpur(ADP-CS)
+              </li>
+              <br />
+              <li>
+                <span>2020-2022</span><br />Superior College Hasilpur(FSC
+                Pre-Enginering)
+              </li>
+              <br />
+              <li>
+                <span>2018-2020</span><br />Sir Syed Model High
+                School(Biology)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- --------services----------- -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Design</h2>
+          <p>
+            🌍As an experienced web developer, I am passionate about creating robust
+            and user-friendly web applications.
+          </p>
+          <a href="#">learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-crop"></i>
+          <h2>UI/UX Design</h2>
+          <p>
+            🌍Proficient in front-end technologies like HTML, CSS, JavaScript, and
+            frameworks such as React.
+          </p>
+          <a href="#">learn more</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-app-store-ios"></i>
+          <h2>App Design</h2>
+          <p>
+            Your business deserves a website that works as hard as you do.
+          </p>
+          <a href="#">learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -----------------portfolio----------- -->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/work-1.png" />
+          <div class="layer">
+            <h3>Social Media App</h3>
+            <p>
+              The App Connect You To The Talented People Around The World .
+              Download it from playstore .
+            </p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/work-2.png" />
+          <div class="layer">
+            <h3>Music App</h3>
+            <p>2024-2025(SENIOR WEB DEVELOPER)<br />
+              UI/UX Design Training At Saylani Mass IT Training
+
+            </p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/work-3.png" />
+          <div class="layer">
+            <h3>Online Shopping App</h3>
+            <p>
+              2025 (Web Development)<br />
+              I'm beginer in this field Web$App Development .
+            </p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <a href="" class="btn editbtn editbtn1" onclick="seemore()">Explore Projects</a>
+    </div>
+  </div>
+  <!-- ----------contact---------- -->
+  <div id="contact" class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fas fa-paper-plane"></i>akhtarsubhan740@gmail.com</p>
+          <p><i class="fas fa-phone-square-alt"></i>+92311-6986045</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/ch.subhan.92775838?mibextid=kFxxJD" target="_blank"><i
+                class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/m.subhan.07/profilecard/?igsh=MTl1cThpZWt6cTZlMA==" target="_blank"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/subhan-akhtar-109246329/?trk=opento_sprofile_details"
+              target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/qr/VSV3JUUZ47ADA1" target="_blank"><i class="fab fa-whatsapp"></i></i></a>
+          </div>
+          <a href="cv.html" target="_blank" class="btn btn2 btn4">My Web CV</a>
+          <a href="images/New Text Document.txt" download class="btn btn2 btn3 ">Download Website Code</a>
+        </div>
+        <div class="contact-right">
+          <!-- <form name="submit-to-google-sheet"> -->
+            <form action="">
+            <input type="text" name="Name" placeholder="Your Name . This section is not working ." required  disabled>
+            <input type="email" name="Email" placeholder="Your Email . This section is not working ." required disabled>
+            <textarea name="Message" rows="6" placeholder="Your Message . This section is not working ." required disabled></textarea>
+            <button type="submit" class="btn btn2" onclick="contactform()">Submit</button>
+          </form>
+          <span id="Msg"></span>
+        </div>
+      </div>
+    </div>
+    <div class="copy-right">
+      <p>Copyright © M.Subhan . Made with <i class="fas fa-heart"></i> by HTML , CSS and JavaScript</p>
+    </div>
+  </div>
+
+
+
+
+
+  <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxYYvl-4Qcxt6zDJ9gp3TrbTRqDVWysYienmJe0-t67eKTeAhyzf9wMV3xuwPH6SGD4/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    const Msg = document.getElementById("Msg")
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          Msg.innerHTML = "Message Sent Successfully"
+          setTimeout(function () {
+            Msg.innerHTML = ""
+          }, 3000)
+          form.reset();
+        })
+        .catch((error) => console.error("Error!", error.message));
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
